@@ -39,10 +39,10 @@
                                             <td>Access Time</td>
                                             <td>Why data was used?</td>
                                             <td>Data</td>
-                                            <td>Accessed by</td>
-                                            <td>Who has access?</td>
+                                            <td>Accessor</td>
+                                            <td>Permissions</td>
                                             <td>How data was used?</td>
-                                            <td>Third party access?</td>
+                                            <td>Third-party access?</td>
                                         </tr>
                                     </thead>
                                     <tbody>
