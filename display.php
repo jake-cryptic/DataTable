@@ -14,7 +14,7 @@
 	<body>
 
         <div class="container-fluid bg-light" style="min-height:100vh">
-            <div class="container p-5 ">
+            <div class="container p-3">
                 <h1 class="display-1">Your Data Table</h1>
             </div>
             <div class="container">
@@ -76,6 +76,20 @@
                 <pre class="p-2">
 <?php echo htmlspecialchars(file_get_contents($fp)); ?>
                 </pre>
+                <hr/>
+                <div>
+                    Other examples:
+                    <ul>
+                        <?php
+                            $fl = glob('examples/*.php');
+                            foreach ($fl as $file) {
+                                $fn = explode('.', explode('/', $file)[1])[0];
+                                $fnc = ucwords($fn);
+                                echo "<li><a href='?ex={$fn}'>{$fnc}</a></li>";
+                            }
+                        ?>
+                    </ul>
+                </p>
             </div>
 
         </div>

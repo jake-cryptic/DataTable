@@ -15,7 +15,7 @@ class Record {
 		$this->type = $type;
 		$this->data = null;
 		$this->time = time();
-		$this->accessor = null;
+		$this->accessor = array();
 		$this->permissions = null;
 		$this->reason = 'Unknown';
 		$this->processed = null;
@@ -34,6 +34,11 @@ class Record {
 
 	public function who() {
 		return $this;
+	}
+
+	public function accessor($thirdParty, $name) {
+		if ($thirdParty === true) $this->third_party = true;
+		$this->accessor[] = $name;
 	}
 	
 }
