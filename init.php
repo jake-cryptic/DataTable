@@ -9,7 +9,7 @@ function out($in) {
 			return $in;
 			break;
 		case "array":
-			return implode(' ', $in);
+			return implode(', ', $in);
 			break;
 		case 'NULL':
 			return 'Unknown';

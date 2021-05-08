@@ -42,7 +42,7 @@
                                             <td>Accessor</td>
                                             <td>Permissions</td>
                                             <td>How data was used?</td>
-                                            <td>Third-party access?</td>
+                                            <td>3rd-party access?</td>
                                         </tr>
                                     </thead>
                                     <tbody>

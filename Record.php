@@ -44,6 +44,7 @@ class Record {
 	public function accessor($thirdParty, $name) {
 		if ($thirdParty === true) $this->third_party = true;
 		$this->accessor[] = $name;
+		return $this;
 	}
 	
 }
