@@ -15,6 +15,8 @@ function out($in) {
 			return 'Unknown';
 		case 'boolean':
 			return $in ? "True" : "False";
+		case 'integer':
+			return (string) $in;
 		default:
 			return 'Null';
 			break;
