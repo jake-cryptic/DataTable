@@ -27,6 +27,11 @@ class Record {
 		return $this;
 	}
 
+	public function data($set) {
+		$this->data = $set;
+		return $this;
+	}
+
 	public function who() {
 		return $this;
 	}

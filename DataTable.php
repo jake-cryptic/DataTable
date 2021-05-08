@@ -14,10 +14,6 @@ class DataTable {
 		);
 
 		$this->types = array('location', 'connectivity');
-
-		if (file_exists('data.json')) {
-			
-		}
 	}
 	
 	public function connect_app() {
@@ -37,14 +33,19 @@ class DataTable {
 
 	public function request($type) {
 		if (!in_array($type, $this->data->custom) && !in_array($type, $this->types)) {
-			throw new Exception("Data type now found, you may need to declare it like: \$dc->declare_custom('{$type}')");
+			throw new Exception("Data type not found, you may need to declare it like: \$dc->declare_custom('{$type}')");
 		}
-		$data['records'][] = new Record($type);
-		return end($data['records']);
+		$this->data->records[] = new Record($type);
+
+		return end($this->data->records);
 	}
-	
+
+	public function get_types() {
+		return array_merge($this->data->custom, $this->types);
+	}
+
 	public function get_data() {
-		return $this->data;
+		return $this->data->records;
 	}
 	
 }
